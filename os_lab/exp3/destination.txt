@@ -1,0 +1,22 @@
+📄 What This Code Does:
+Opens file.txt in read-only mode.
+
+Opens/creates destination.txt in write mode:
+
+O_CREAT → creates if it doesn’t exist
+
+O_WRONLY → open for writing
+
+O_TRUNC → clears old content if it exists
+
+0644 → permission (rw-r--r--)
+
+Reads up to 1024 bytes at a time into buffer.
+
+Writes that data to destination.txt.
+Repeats until end of file.
+Closes both files.
+Important Notes:
+You must open the file in O_WRONLY or O_RDWR, not O_RDONLY, or O_TRUNC will be ignored.
+
+Use it when you want a fresh start, not appending to old content.
